@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "manhdeptrai",
+      "description": "manhdeptrai"
+    },
+    {
+      "id": "2",
+      "title": "hello",
+      "description": "testing welcome"
+    },
+    {
+      "id": "3",
+      "title": "helloss",
+      "description": "testing welcomes"
+    }
+  ]
+}
