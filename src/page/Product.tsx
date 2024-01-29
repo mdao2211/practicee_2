@@ -20,27 +20,7 @@ interface Product{
 }
 
 export default function Product() {
-  //   const [loading, setLoading] = useState(false);
-  //   const [products, setProducts] = useState([]);
-  //   const [error, setError] = useState<string | null>(null);
 
-  //   useEffect(() => {
-  //     setLoading(true);
-  //     setError(null);
-  //     fetchProduct();
-  //   }, []);
-
-  //   async function fetchProduct() {
-  //     try {
-  //       const res = await fetch("http://localhost:3000/products");
-  //       const data = await res.json();
-  //       setProducts(data);
-  //     } catch (error) {
-  //       if (error instanceof Error) setError(error.message);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   }
   function handleDelete(id: string){
     const confirmDelete = window.confirm("Do u like to delete?")
     if(confirmDelete){

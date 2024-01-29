@@ -18,27 +18,32 @@ import axios from 'axios';
 function Update() {
   const {id} = useParams(); 
   const [values,setValues] = useState({
-    id: id,
+    id: 'id',
     title: '',
     description: '',
   })  
   useEffect(() => {
     axios.get("http://localhost:3000/products/" + id)
     .then(res => {
-        setValues({...values, title: res.data.title, description: res.data.description})
+        setValues(prevState => ({
+            ...prevState,
+            id: res.data.id,
+            title: res.data.title,
+            description: res.data.description
+        }));
     })
-    .catch(err => console.log(err))
-  })
+    .catch(err => console.log(err));
+}, [id]);
 
   const navigate = useNavigate()
-  const handleSubmit = (e: { preventDefault: () => void; }) =>{
-    e.preventDefault()
-    axios.put("http://localhost:3000/products/" + id,values)
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+    axios.put("http://localhost:3000/products/" + id, values)
     .then(() => {
-        navigate('/')
+        navigate('/');
     })
-    .catch(err => console.log(err))
-  }
+    .catch(err => console.log(err));
+}
 
   return (
     <div>
@@ -58,7 +63,7 @@ function Update() {
                     <Label className="text-right">
                     ID
                     </Label>
-                    <Input id="name"  className="col-span-3" value={values.id}/>
+                    <Input id="id"  className="col-span-3" value={values.id} onChange={e => setValues({...values, id: e.target.value})}/>
                 </div>
                 <div className="grid grid-cols-4 items-center gap-4">
                     <Label className="text-right">
