@@ -8,14 +8,13 @@ import {
   DropdownMenuSeparator,
   DropdownMenuItem,
   DropdownMenuContent,
-  DropdownMenu
-} from '@/components/ui/dropdown-menu'
-// eslint-disable-next-line import/order
-import { Link, Outlet } from 'react-router-dom'
-// eslint-disable-next-line import/order
-import { SVGProps, JSX } from 'react'
+  DropdownMenu,
+} from "@/components/ui/dropdown-menu";
+import { Link, Outlet } from "react-router-dom";
+import { SVGProps, JSX  } from "react";
 
-export default function App() {
+
+export default function   App() {
   return (
     <div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr]">
       <div className="hidden border-r bg-gray-100/40 lg:block dark:bg-gray-800/40">
