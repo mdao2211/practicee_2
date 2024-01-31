@@ -19,7 +19,7 @@ import {
 import { Link, Outlet } from "react-router-dom";
 import { SVGProps, JSX  } from "react";
 
-
+//Pull Request
 export default function   App() {
   return (
     <div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr]">
